@@ -1,11 +1,99 @@
+<!-- 
+ BEM : Block__Element--Modifer
+visible : 기본 값입니다. 넘칠 경우 컨텐츠가 상자 밖으로 보여집니다.
+hidden : 넘치는 부분은 잘려서 보여지지 않습니다.
+scroll : 스크롤바가 추가되어 스크롤할 수 있습니다.(가로, 세로 모두 추가 됩니다.)
+auto : 컨텐츠 량에 따라 스크롤바를 추가할지 자동으로 결정됩니다.( 필요에 따라 가로, 세로 별도로 추가될 수도 있습니다.) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- 상단 바 -->
+    <div class="top-bar">
+        <div class="top-bar__column">
+            <i class="fa-solid fa-bars-staggered"></i> <!-- 햄버거아이콘 -->
+        </div>
+        <div class="top-bar__column">
+            <span>library</span><!-- 메뉴명 -->
+        </div>
+        <div class="top-bar__column">
+            <i class="fa-solid fa-basket-shopping"></i><!-- 장바구니아이콘 -->
+        </div>
+    </div>
+
+    <!-- 검색 바 -->
+    <div class="search-bar">
+        <!--div class="search-bar__container"-->
+            <form class="search-bar__form">
+                <input type="text" placeholder="Search books..." />
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+        <!--/div-->
+    </div>
+
+    <!-- /* 오늘의 책 */ -->
+    <h1>Book of the day</h1>
+    <div class="todays-book-section">        
+        <div class="todays-book-section__column">
+            <img src="img/nofixedabode.jpg" class="todays-book-section__img"/><!-- 책 이미지 -->
+        </div>
+        <div class="todays-book-section__column">
+            <span>No Fixed Abode</span><!-- 책이름  -->
+            <span>Journey Through</span><!-- 작가이름  -->
+            <span class="rating__star">★★★★☆</span><!-- 별점  -->
+            <span>Journey</span><!-- 장르1  -->
+            <span>Biography</span><!-- 장르2  -->
+            <i class="fa-solid fa-bookmark"></i><!-- 저장  -->
+            <button>Book now</button><!-- 구매버튼 -->
+        </div>
+    </div>
+
+    <!-- /* 장르 추천 */ -->
+    <div class="top-adventures-section">
+        <h1>Top Adventures</h1>
+        <div class="top-adventures-section__listbox">
+            <ul class="top-adventures-section__ul">
+                <li class="top-adventures-section__li">
+                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
+                </li>
+                <li class="top-adventures-section__li">
+                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
+                </li>
+                <li class="top-adventures-section__li">
+                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
+                </li>
+                <li class="top-adventures-section__li">                    
+                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- /* 작가소개 */ -->
+    <div class="authors-section">
+        <h1>Popular authors</h1>
+        <div class="authors-section__column">
+            <img src="img/authours_pic.jpg" class="authors-section__img"/><!-- 작가사진 -->
+        </div>
+        <div class="authors-section__column">
+            <span>George Raymond Richard Martin</span>
+            <p>
+                Modern American science fiction writer, screenwriter, producer and editor, winner of many literary awards.
+            </p>
+        </div>
+    </div>
+
+
+<!-- 스크립트는 항상 마지막에 있어야함(마지막 body태그 닫기 직전에) -->
+<script src="https://kit.fontawesome.com/bafa1ff91e.js" crossorigin="anonymous"></script>       
 </body>
 </html>
