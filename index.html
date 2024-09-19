@@ -14,14 +14,14 @@ auto : 컨텐츠 량에 따라 스크롤바를 추가할지 자동으로 결정�
 </head>
 <body>
     <!-- 상단 바 -->
-    <div class="top-bar">
-        <div class="top-bar__column">
+    <div class="header">
+        <div class="header__column">
             <i class="fa-solid fa-bars-staggered"></i> <!-- 햄버거아이콘 -->
         </div>
-        <div class="top-bar__column">
+        <div class="header__column">
             <span>library</span><!-- 메뉴명 -->
         </div>
-        <div class="top-bar__column">
+        <div class="header__column">
             <i class="fa-solid fa-basket-shopping"></i><!-- 장바구니아이콘 -->
         </div>
     </div>
@@ -29,69 +29,80 @@ auto : 컨텐츠 량에 따라 스크롤바를 추가할지 자동으로 결정�
     <!-- 검색 바 -->
     <div class="search-bar">
         <!--div class="search-bar__container"-->
-            <form class="search-bar__form">
-                <input type="text" placeholder="Search books..." />
+            <!-- <form class="search-bar__form"> -->
+                <input class="search-bar__input" type="text" placeholder="Search books..." />
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </form>
+            <!-- </form> -->
         <!--/div-->
     </div>
 
-    <!-- /* 오늘의 책 */ -->
-    <h1>Book of the day</h1>
-    <div class="todays-book-section">        
-        <div class="todays-book-section__column">
-            <img src="img/nofixedabode.jpg" class="todays-book-section__img"/><!-- 책 이미지 -->
-        </div>
-        <div class="todays-book-section__column">
-            <span>No Fixed Abode</span><!-- 책이름  -->
-            <span>Journey Through</span><!-- 작가이름  -->
-            <span class="rating__star">★★★★☆</span><!-- 별점  -->
-            <span>Journey</span><!-- 장르1  -->
-            <span>Biography</span><!-- 장르2  -->
-            <i class="fa-solid fa-bookmark"></i><!-- 저장  -->
-            <button>Book now</button><!-- 구매버튼 -->
-        </div>
-    </div>
+    <div class="main">
+    <!-- Book of the day -->
+        <h1>Book of the day</h1>
+        <div class="todays-book-section">        
+            <div class="todays-book-section__column">
+                <img src="img/nofixedabode.jpg" class="todays-book-section__img"/><!-- 책 이미지 -->
+            </div>
+            <div class="todays-book-section__column">
+                <span>No Fixed Abode</span><!-- 책이름  -->
+                <span>Journey Through</span><!-- 작가이름  -->
+                
+                <div class="todays-book-section__row">
+                    <span class="rating__star">★★★★</span><span class="rating__star2">★</span><!-- 별점  -->
+                </div>
 
-    <!-- /* 장르 추천 */ -->
-    <div class="top-adventures-section">
+                <div class="todays-book-section__row">
+                    <span>Journey</span><!-- 장르1  -->
+                    <span>Biography</span><!-- 장르2  -->
+                </div>
+                
+                <div class="todays-book-section__row">
+                    <i class="fa-solid fa-bookmark"></i><!-- 저장  -->
+                    <button>Book now</button><!-- 구매버튼 -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Top Adventures -->
         <h1>Top Adventures</h1>
-        <div class="top-adventures-section__listbox">
-            <ul class="top-adventures-section__ul">
-                <li class="top-adventures-section__li">
-                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
-                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
-                </li>
-                <li class="top-adventures-section__li">
-                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
-                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
-                </li>
-                <li class="top-adventures-section__li">
-                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
-                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
-                </li>
-                <li class="top-adventures-section__li">                    
-                    <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
-                    <span class="rating__star">★★★★☆</span><!-- 별점 -->
-                </li>
-            </ul>
+        <div class="top-adventures-section">
+            <div class="top-adventures-section__listbox">
+                <ul class="top-adventures-section__ul">
+                    <li class="top-adventures-section__li">
+                        <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                        <span class="rating__star">★★★★</span><span class="rating__star2">★</span><!-- 별점 -->
+                    </li>
+                    <li class="top-adventures-section__li">
+                        <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                        <span class="rating__star">★★★★</span><span class="rating__star2">★</span><!-- 별점 -->
+                    </li>
+                    <li class="top-adventures-section__li">
+                        <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                        <span class="rating__star">★★★★</span><span class="rating__star2">★</span><!-- 별점 -->
+                    </li>
+                    <li class="top-adventures-section__li">                    
+                        <img src="img/nofixedabode.jpg" class="top-adventures-section__img"/><!-- 책표지 이미지 -->
+                        <span class="rating__star">★★★★</span><span class="rating__star2">★</span><!-- 별점 -->
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <!-- /* 작가소개 */ -->
-    <div class="authors-section">
+        <!-- Popular authors -->
         <h1>Popular authors</h1>
-        <div class="authors-section__column">
-            <img src="img/authours_pic.jpg" class="authors-section__img"/><!-- 작가사진 -->
-        </div>
-        <div class="authors-section__column">
-            <span>George Raymond Richard Martin</span>
-            <p>
-                Modern American science fiction writer, screenwriter, producer and editor, winner of many literary awards.
-            </p>
+        <div class="authors-section">
+            <div class="authors-section__column">
+                <img src="img/authours_pic.jpg" class="authors-section__img"/><!-- 작가사진 -->
+            </div>
+            <div class="authors-section__column">
+                <h2>George Raymond Richard Martin</h2>
+                <p>
+                    Modern American science fiction writer, screenwriter, producer and editor, winner of many literary awards.
+                </p>
+            </div>
         </div>
     </div>
-
 
 <!-- 스크립트는 항상 마지막에 있어야함(마지막 body태그 닫기 직전에) -->
 <script src="https://kit.fontawesome.com/bafa1ff91e.js" crossorigin="anonymous"></script>       
